@@ -1,0 +1,60 @@
+{
+  "name": "ylight",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "axios-jsonp": "^1.0.4",
+    "chunk": "^0.0.3",
+    "dexie": "^3.0.3",
+    "dexie-observable": "^3.0.0-beta.10",
+    "dotenv": "8.2.0",
+    "framer-motion": "^3.2.1",
+    "html-entities": "^2.3.3",
+    "jsonp": "^0.2.1",
+    "prop-types": "^15.8.1",
+    "q": "^1.5.1",
+    "react": "^17.0.1",
+    "react-circle-slider": "^1.6.2",
+    "react-dom": "^17.0.1",
+    "react-ga": "^3.3.0",
+    "react-recaptcha-v3": "^2.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.2",
+    "react-swipeable": "^6.0.1",
+    "react-virtualized-auto-sizer": "^1.0.4",
+    "react-window-dynamic": "^1.8.0-alpha.2",
+    "typeface-roboto": "^1.1.13",
+    "web-vitals": "^1.0.1",
+    "webpack": "^4.44.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
