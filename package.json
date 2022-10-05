@@ -1,5 +1,5 @@
 {
-  "name": "ylight",
+  "name": "geet-music",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,8 +30,7 @@
     "react-virtualized-auto-sizer": "^1.0.4",
     "react-window-dynamic": "^1.8.0-alpha.2",
     "typeface-roboto": "^1.1.13",
-    "web-vitals": "^1.0.1",
-    "webpack": "^4.44.2"
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
