@@ -1,0 +1,191 @@
+.render-list-container {
+  position: relative;
+}
+
+/* this is overlay so that when people will click on this the song wont play */
+.download-container {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  cursor: cell;
+}
+
+.download-container .badge-container {
+  height: 18px;
+  width: 18px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  background: #636e72;
+  background: #ec407a;
+  display: block;
+  border-radius: 50%;
+  top: 16px;
+  left: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-container img {
+  width: 12px;
+}
+
+/* we will add this class when download starts */
+.downloading-animation {
+  transform: translateY(-18px);
+  animation: cubic-bezier(0.55, 0.09, 0.68, 0.53) animate-drop 1s infinite;
+}
+
+@keyframes animate-drop {
+  100% {
+    transform: translateY(18px);
+  }
+}
+
+.pinkLists > a,
+.pinkLists svg {
+  color: #e91e63;
+}
+.pinkLists > a {
+  margin: 5px;
+  background: #e91d6312;
+  border-radius: 5px;
+  width: auto;
+}
+.pinkLists > a:hover {
+  background: #e91d6423;
+}
+
+.cardSlider {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.cardSlider::-webkit-scrollbar {
+  display: none;
+}
+
+/* style for the heart shown on music art  */
+
+svg.songHeart {
+  position: absolute;
+  top: 10px;
+
+  font-size: 4em;
+  color: #e91d63;
+  transition: all 0.3s cubic-bezier(0.82, 0.33, 0, 1.46);
+}
+
+svg.songHeart.right {
+  right: -8px;
+}
+
+svg.songHeart.left {
+  left: -8px;
+}
+
+/* main media player container style */
+.mediaPlayerContainer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 1400;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.playerMinimized {
+  transform: translateY(calc(100% - 106px));
+  z-index: 0;
+  background: #e91e63;
+}
+
+.playerPlaylist {
+  transform: translateY(-418px);
+}
+
+/* short the title based on space */
+.musicArtTitle {
+  width: 88vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* style for the playlist of related videos */
+
+.RelatedVideoContainer {
+  background: #e91d63;
+  overflow: auto;
+  height: calc(100% - 200px);
+  height: 100%;
+  min-height: 470px;
+  /* half of the portion will be taken by player */
+}
+
+.RelatedVideoContainer ul {
+  height: 100%;
+}
+
+div.RelatedVideoContainer * {
+  color: #fff;
+}
+
+.playlistHeader {
+  padding: 7px 15px;
+  position: sticky;
+  top: 0;
+  background: #e91d63;
+  z-index: 1;
+  box-shadow: #06060640 0px 2px 3px;
+}
+
+.searchPopper {
+  width: 100%;
+  height: 93%;
+  background: #fff;
+}
+
+.playlistHeader h6 {
+  margin-right: 50px;
+}
+
+.playlistHeader svg {
+  /* font-size: 1.8em; */
+}
+
+/* hide recaptcha badge */
+div.grecaptcha-badge {
+  display: none;
+}
+
+.dayNightToggleBtn {
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* forcing style for bottom tab menu */
+div a.MuiTab-root{
+  padding: 0;
+  line-height: .8;
+  min-height: 48px;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+/* fix on small screen */
+@media (max-height: 570px) {
+  .musicArtContainer {
+    height: 70%;
+  }
+}
