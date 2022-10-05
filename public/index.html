@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/icons/ios-icon.png" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0,user-scalable=no"
+    />
+    <meta name="theme-color" content="#e91e63" />
+    <meta
+      name="description"
+      content="Listen and download unlimited songs for free without any ads only on Ylight music"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>
+      Ylight Music - Listen to unlimited songs for free without any ads
+    </title>
+  </head>
+
+  <style>
+    .full-page-loader {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    .full-page-loader > svg {
+      width: 200px;
+      animation: 1.8s infinite heartbeat;
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1.05);
+      }
+      50% {
+        transform: scale(1) rotate(360deg);
+      }
+      75% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+
+  <body style="margin: 0">
+    <noscript>
+      <h1>
+        Hello my smart visitor please enable javascript to make this app work
+      </h1>
+    </noscript>
+    <div id="root">
+      <div class="full-page-loader">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="compact-disc"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 496 512"
+        >
+          <path
+            fill="#e91e63"
+            d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM88 256H56c0-105.9 86.1-192 192-192v32c-88.2 0-160 71.8-160 160zm160 96c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
