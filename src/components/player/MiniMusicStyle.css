@@ -1,0 +1,72 @@
+.mainContainer {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
+
+
+.miniArtContainer {
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  position: absolute;
+  left: calc(50% - 45px);
+  /* so that it stays in center */
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 150px;
+}
+
+.miniArtImg {
+  object-fit: cover;
+  text-align: center;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+div.details {
+  color: #fff;
+  margin: 5px 8px;
+}
+
+.mainContainer .details * {
+  width: 35%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+div.buttons {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  color: #fff;
+  transform: translateY(-50%);
+}
+div.buttons svg{
+  font-size: 2.4em;
+  margin-right: 8px;
+  margin-left: 10px;
+}
+.mainArt {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  box-shadow: #00000030 0px 3px 6px;
+  border-radius: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
