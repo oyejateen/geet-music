@@ -1,5 +1,5 @@
 # An open source progressive music app made with Javascript using ReactJS and Material-Ui
-![Ylight music app screenshots](https://i.imgur.com/DKTItwI.png)
+![Geet music app screenshots](https://media.discordapp.net/attachments/895299400488849458/1027102890323607602/Picsart_22-10-05_11-49-17-308.png)
 
 
 
@@ -12,8 +12,6 @@
 
 
 ### Please open an issue for any bugs
-### Please support me on patreon 
-[![Become a patron](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/bePatron?u=7063971)
 
 ## I would like to thank
 + [Will Adams](https://github.com/bushblade)
