@@ -146,7 +146,7 @@ Project Link: [geet.gq](https://geet.gq)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-Firstly, I would like to thank [Will Adams](https://github.com/TEDDY6969) for all the help and writing the base of project.
+Firstly, I would like to thank [Will Adams](https://github.com/TEDDY6969) for all the help in hosting server.
 Secondly, I have downloaded music from Deezer website and right on the content goes to their respective owners.
 And last but not the least, thanks to w3 schools, geeksforgeek. 
 * [Will Adams](https://github.com/TEDDY6969)
