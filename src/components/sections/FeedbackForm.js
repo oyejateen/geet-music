@@ -42,7 +42,7 @@ const FeedbackForm = () => {
     };
 
     axios
-      .post('https://xmailerr.glitch.me/contact', post)
+      .post('https://contact.iiiv.repl.co/contact', post)
       .then(function (response) {
         // console.log(response.data.status);
         // also clear the form
