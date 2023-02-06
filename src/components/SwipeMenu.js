@@ -86,10 +86,7 @@ const SwipeMenu = () => {
         >
         </div>
         <h1 style={{
-            margin: "35px",
-            position: "relative",
-            width: "30px",
-            height: "30px"
+            margin: "35px"
           }} id="logo-geet-musix">Geet Music</h1>
         <Divider />
 
