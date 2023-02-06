@@ -80,7 +80,7 @@ const ContributorsPage = () => {
           <Typography variant="h5">Will Adams</Typography>
         </Grid>
         <Divider className={classes.divider} />
-        <Typography justify="center" variant="h5">Visit our GitHub page to view all contributors</Typography>
+        <Typography justify="center" variant="h8">Visit our GitHub page to view all contributors</Typography>
       </Grid>
     </>
   );
