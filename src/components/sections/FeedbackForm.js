@@ -85,7 +85,6 @@ const handle = () => {
       style={{ width: '90%', maxWidth: '500px', margin: '0 auto' }}
     >
    
-      <Typography align="center">Visit Our Contact page</Typography>
       <Button
         style={{ margin: '50px' }}
         variant="outlined"
