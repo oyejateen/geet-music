@@ -91,7 +91,7 @@ const handle = () => {
         color="primary"
         onClick={handle}
         type="button"
-      >
+      >Send Message
       </Button>
     </Grid>
   );
