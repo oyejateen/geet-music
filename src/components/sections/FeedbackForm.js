@@ -84,15 +84,13 @@ const handle = () => {
       justify="center"
       style={{ width: '90%', maxWidth: '500px', margin: '0 auto' }}
     >
-      <Typography variant="h5" align="center">Visit Our Contact page</Typography>
       <Button
         style={{ marginTop: '10px' }}
         variant="outlined"
         color="primary"
         onClick={handle}
         type="button"
-      >Send Message
-      </Button>
+      >Send Message</Button>
     </Grid>
   );
 };
