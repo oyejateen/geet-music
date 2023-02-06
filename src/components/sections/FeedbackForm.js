@@ -86,7 +86,7 @@ const handle = () => {
     >
    
       <Button
-        style={{ margin: '50vw' }}
+        style={{ margin: '70px' }}
         variant="outlined"
         color="primary"
         onClick={handle}
