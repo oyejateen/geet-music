@@ -98,7 +98,7 @@ const SwipeMenu = () => {
             />
           </AnimatePresence>
         </div>
-
+        <h1 id="logo-geet-musix">Geet Music</h1>
         <Divider />
 
         <List
