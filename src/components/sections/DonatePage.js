@@ -8,7 +8,7 @@ const DonatePage = () => {
     <main style={{ margin: "10px" }}>
       <br />
       <Typography variant="h5" align="center">
-        Support Me{" "}
+        Support Us{" "}
         <span role="img" aria-label="hands joining">
           🙏
         </span>
