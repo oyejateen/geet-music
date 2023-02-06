@@ -46,14 +46,7 @@ const LoginPage = ({ continueToHome }) => {
       >
         Listen to unlimited songs without any ads for free only on Geet Music
       </Typography>
-      <img
-        style={{
-          width: "70vw",
-          maxWidth: "350px"
-        }}
-        src="https://cdn.discordapp.com/attachments/938107328434151475/1022775310388842506/Picsart_22-09-23_13-13-28-261.png"
-        alt="Handcrafted by Jatin"
-      />
+      
       <Button variant="outlined" color="primary" onClick={continueToHome}>
         Continue
         <NavigateNext />
