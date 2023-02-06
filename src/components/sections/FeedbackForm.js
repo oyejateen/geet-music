@@ -66,6 +66,9 @@ const FeedbackForm = () => {
   React.useEffect(() => {
     loadReCaptcha('6Le1toEUAAAAAITyNwqEMaz3hFAYzciSJDMomrgN');
   }, []);
+const handle = () => {
+    window.location.assign("https://jatinxd.tk/message");
+  };
 
   const verifyCallback = (token) => {
     // // console.log(token);
@@ -77,75 +80,18 @@ const FeedbackForm = () => {
 
   return (
     <Grid
-      component="form"
-      ref={formEl}
-      onSubmit={submitForm}
-      container
       required
       justify="center"
       style={{ width: '90%', maxWidth: '500px', margin: '0 auto' }}
     >
-      <ReCaptcha
-        sitekey="6Le1toEUAAAAAITyNwqEMaz3hFAYzciSJDMomrgN"
-        action="action_name"
-        verifyCallback={verifyCallback}
-      />
-      <TextField
-        id="outlined-email-input"
-        label="Name"
-        type="text"
-        name="name"
-        autoComplete="name"
-        margin="normal"
-        variant="outlined"
-        fullWidth
-        color="primary"
-        required
-      />
-      <TextField
-        id="outlined-email-input"
-        label="Email"
-        type="email"
-        name="email"
-        autoComplete="email"
-        margin="normal"
-        variant="outlined"
-        fullWidth
-        color="primary"
-        required
-      />
-      <TextField
-        id="outlined-email-input"
-        label="Feedback"
-        multiline
-        rows="4"
-        type="text"
-        name="message"
-        autoComplete="feedback"
-        margin="normal"
-        variant="outlined"
-        fullWidth
-        color="primary"
-        required
-      />
-      {isSending ? (
-        <LinearProgress
-          style={{
-            width: '100%',
-            transform: 'translateY(-12px)',
-            borderRadius: '2px',
-          }}
-        />
-      ) : null}
+      <Typography variant="h5" align="center">Visit Our Contact page</Typography>
       <Button
         style={{ marginTop: '10px' }}
         variant="outlined"
         color="primary"
-        type="submit"
-        disabled={isSending ? true : false}
+        onClick={handle}
+        type="button"
       >
-        {/* if sending is true then show circular progress */}
-        {isSending ? 'Sending Feedback' : 'Send Feedback'}
       </Button>
     </Grid>
   );
