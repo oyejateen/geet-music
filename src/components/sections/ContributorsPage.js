@@ -61,7 +61,6 @@ const ContributorsPage = () => {
             src="https://cdn.discordapp.com/attachments/938107328434151475/1023550706575220766/Screenshot_2022-09-25-16-34-21-66.png"
           />
           <Typography variant="h5">Jatin</Typography>
-          <Typography>Creator of Geet Music</Typography>
         </Grid>
 
         <Grid
@@ -79,10 +78,9 @@ const ContributorsPage = () => {
             src="https://avatars2.githubusercontent.com/u/21976188?s=300"
           />
           <Typography variant="h5">Will Adams</Typography>
-          <Typography>Helped in Hosting</Typography>
         </Grid>
         <Divider className={classes.divider} />
-        
+        <Typography justify="center" variant="h5">Visit our GitHub page to view all contributors</Typography>
       </Grid>
     </>
   );
