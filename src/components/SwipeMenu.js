@@ -84,21 +84,13 @@ const SwipeMenu = () => {
             height: "30px"
           }}
         >
-          <AnimatePresence>
-            <motion.img
-              key={isNight ? sun : moon}
-              initial={{ scale: 0 }}
-              animate={{ scale: 1.5, rotate: "360deg" }}
-              exit={{ scale: 0 }}
-              // transition={{ duration: 0.5 }}
-              src={isNight ? sun : moon}
-              onClick={() => handleThemeToggle()}
-              className="dayNightToggleBtn"
-              alt="sun moon icon"
-            />
-          </AnimatePresence>
         </div>
-        <h1 id="logo-geet-musix">Geet Music</h1>
+        <h1 style={{
+            margin: "35px",
+            position: "relative",
+            width: "30px",
+            height: "30px"
+          }} id="logo-geet-musix">Geet Music</h1>
         <Divider />
 
         <List
