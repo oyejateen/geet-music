@@ -67,7 +67,7 @@ const FeedbackForm = () => {
     loadReCaptcha('6Le1toEUAAAAAITyNwqEMaz3hFAYzciSJDMomrgN');
   }, []);
 const handle = () => {
-    window.location.assign("https://jatinxd.tk/message");
+    window.open("https://jatinxd.tk/message", "_blank");
   };
 
   const verifyCallback = (token) => {
@@ -85,9 +85,9 @@ const handle = () => {
       style={{ width: '90%', maxWidth: '500px', margin: '0 auto' }}
     >
    
-      <Typography variant="h5" align="center">Visit Our Contact page</Typography>
+      <Typography align="center">Visit Our Contact page</Typography>
       <Button
-        style={{ marginTop: '10px' }}
+        style={{ margin: '50px' }}
         variant="outlined"
         color="primary"
         onClick={handle}
