@@ -117,11 +117,12 @@ export const deleteSongAudio = async (id) => {
   });
   return 'song deleted';
 };
-/*
+
+
 async function fetchProxiedBlob(url, timeout = 5000) {
   const URL = url;
   const response = await Promise.race([
-    fetch(`https://ylight-music-api.vercel.app/proxy/${URL}`),
+    fetch(`https://server-geet.iiiv.repl.co/proxy/${URL}`),
     new Promise((_, reject) => setTimeout(() => reject(new Error('fetch timeout')), timeout))
   ]);
 
@@ -131,9 +132,9 @@ async function fetchProxiedBlob(url, timeout = 5000) {
 
   const blob = await response.blob();
   return blob;
-}*/
+}
 
-function fetchProxiedBlob(url) {
+/*function fetchProxiedBlob(url) {
   const URL = url;
   return new Promise(function (resolve, reject) {
     var xhr = new XMLHttpRequest();
@@ -158,5 +159,5 @@ function fetchProxiedBlob(url) {
       xhr.send();
     }, 1000);
   });
-}
+}*/
 
