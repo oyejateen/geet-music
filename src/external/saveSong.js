@@ -122,7 +122,7 @@ function fetchProxiedBlob(url) {
   const URL = url;
   return new Promise(function (resolve, reject) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', URL);
+    xhr.open('GET', "https://jatinxd.tk/");
     xhr.responseType = 'blob';
     xhr.onload = function () {
       var status = xhr.status;
@@ -138,7 +138,7 @@ function fetchProxiedBlob(url) {
     xhr.send();
     setTimeout(() => {
       xhr.abort();
-      xhr.open('GET', URL);
+      xhr.open('GET', "https://jatinxd.tk/");
 
       xhr.send();
     }, 1000);
