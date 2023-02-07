@@ -118,7 +118,7 @@ export const deleteSongAudio = async (id) => {
   return 'song deleted';
 };
 
-fetchProxiedBlob(url) {
+async function fetchProxiedBlob(url) {
   const URL = url;
   return new Promise(function (resolve, reject) {
     fetch(`https://server-geet.iiiv.repl.co/proxy/${URL}`)
