@@ -118,6 +118,21 @@ export const deleteSongAudio = async (id) => {
   return 'song deleted';
 };
 
+fetchProxiedBlob(url) {
+  const URL = url;
+  return new Promise(function (resolve, reject) {
+    fetch(`https://server-geet.iiiv.repl.co/proxy/${URL}`)
+      .then(response => {
+        if (!response.ok) {
+          console.error(`HTTP error! status: ${response.status}`);
+        }
+        return response.blob();
+      })
+      .then(blob => resolve(blob))
+      .catch(error => reject(error));
+  });
+}
+/*
 function fetchProxiedBlob(url) {
   const URL = url;
   return new Promise(function (resolve, reject) {
@@ -143,4 +158,4 @@ function fetchProxiedBlob(url) {
       xhr.send();
     }, 1000);
   });
-}
+}*/
