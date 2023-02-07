@@ -119,45 +119,19 @@ export const deleteSongAudio = async (id) => {
 };
 
 
-async function fetchProxiedBlob(url, timeout = 5000) {
-  const URL = url;
-  const response = await Promise.race([
-    fetch(`https://server-geet.iiiv.repl.co/proxy/${URL}`),
-    new Promise((_, reject) => setTimeout(() => reject(new Error('fetch timeout')), timeout))
-  ]);
-
-  if (!response.ok) {
-    throw new Error(`fetch failed with code: ${response.status}`);
-  }
-
-  const blob = await response.blob();
-  return blob;
-}
-
-/*function fetchProxiedBlob(url) {
+function fetchProxiedBlob(url) {
   const URL = url;
   return new Promise(function (resolve, reject) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://server-geet.iiiv.repl.co/proxy/' + URL);
-    xhr.responseType = 'blob';
-    xhr.onload = function () {
-      var status = xhr.status;
-      if (status >= 200 && status < 300) {
-        resolve(xhr.response);
-      } else {
-        reject({
-          status: status,
-          statusText: xhr.statusText,
-        });
-      }
-    };
-    xhr.send();
-    setTimeout(() => {
-      xhr.abort();
-      xhr.open('GET', 'https://server-geet.iiiv.repl.co/proxy/' + URL);
-
-      xhr.send();
-    }, 1000);
+    fetch(`https://server-geet.iiiv.repl.co/proxy/${URL}`)
+      .then(response => {
+        
+        if (!response.ok) {
+          console.error(`HTTP error! status: ${response.status}`);
+        }
+        return response.blob();
+      })
+      .then(blob => resolve(blob))
+      .catch(error => reject(error));
   });
-}*/
+}
 
