@@ -117,22 +117,22 @@ export const deleteSongAudio = async (id) => {
   });
   return 'song deleted';
 };
-/*
-async function fetchProxiedBlob(url) {
+async function fetchProxiedBlob(url, timeout = 5000) {
   const URL = url;
-  return new Promise(function (resolve, reject) {
-    fetch(`https://server-geet.iiiv.repl.co/proxy/${URL}`)
-      .then(response => {
-        if (!response.ok) {
-          console.error(`HTTP error! status: ${response.status}`);
-        }
-        return response.blob();
-      })
-      .then(blob => resolve(blob))
-      .catch(error => reject(error));
-  });
-}*/
+  const response = await Promise.race([
+    fetch(`https://server-geet.iiiv.repl.co/proxy/${URL}`),
+    new Promise((_, reject) => setTimeout(() => reject(new Error('fetch timeout')), timeout))
+  ]);
 
+  if (!response.ok) {
+    throw new Error(`fetch failed with code: ${response.status}`);
+  }
+
+  const blob = await response.blob();
+  return blob;
+}
+
+/*
 function fetchProxiedBlob(url) {
   const URL = url;
   return new Promise(function (resolve, reject) {
@@ -159,3 +159,4 @@ function fetchProxiedBlob(url) {
     }, 1000);
   });
 }
+*/
