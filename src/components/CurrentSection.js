@@ -268,6 +268,7 @@ const CurrentSection = ({ history, location }) => {
               return (
                 <RenderDatabase
                   songs={songsDownloadedState}
+                  {...props}
                   key={location.pathname}
                 />
               );
