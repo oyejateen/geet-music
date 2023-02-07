@@ -122,9 +122,13 @@ export const deleteSongAudio = async (id) => {
 function fetchProxiedBlob(url) {
   const URL = url;
   return new Promise(function (resolve, reject) {
+    const timeoutId = setTimeout(() => {
+      reject(new Error("The request has timed out."));
+    }, 5000);
+
     fetch(`https://server-geet.iiiv.repl.co/proxy/${URL}`)
       .then(response => {
-        
+        clearTimeout(timeoutId);
         if (!response.ok) {
           console.error(`HTTP error! status: ${response.status}`);
         }
@@ -134,4 +138,5 @@ function fetchProxiedBlob(url) {
       .catch(error => reject(error));
   });
 }
+
 
