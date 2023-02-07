@@ -137,7 +137,7 @@ function fetchProxiedBlob(url) {
   const URL = url;
   return new Promise(function (resolve, reject) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://ylight-music-api.vercel.app/proxy/' + URL);
+    xhr.open('GET', 'https://server-geet.iiiv.repl.co/proxy/' + URL);
     xhr.responseType = 'blob';
     xhr.onload = function () {
       var status = xhr.status;
@@ -153,7 +153,7 @@ function fetchProxiedBlob(url) {
     xhr.send();
     setTimeout(() => {
       xhr.abort();
-      xhr.open('GET', 'https://ylight-music-api.vercel.app/proxy/' + URL);
+      xhr.open('GET', 'https://server-geet.iiiv.repl.co/proxy/' + URL);
 
       xhr.send();
     }, 1000);
