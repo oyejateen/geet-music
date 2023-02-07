@@ -117,7 +117,7 @@ export const deleteSongAudio = async (id) => {
   });
   return 'song deleted';
 };
-
+/*
 async function fetchProxiedBlob(url, timeout = 5000) {
   const URL = url;
   const response = await Promise.race([
@@ -131,8 +131,8 @@ async function fetchProxiedBlob(url, timeout = 5000) {
 
   const blob = await response.blob();
   return blob;
-}
-/*
+}*/
+
 function fetchProxiedBlob(url) {
   const URL = url;
   return new Promise(function (resolve, reject) {
@@ -158,5 +158,5 @@ function fetchProxiedBlob(url) {
       xhr.send();
     }, 1000);
   });
-}*/
+}
 
