@@ -118,29 +118,29 @@ export const deleteSongAudio = async (id) => {
   return 'song deleted';
 };
 
-
 function fetchProxiedBlob(url) {
   const URL = url;
   return new Promise(function (resolve, reject) {
-    const timeoutId = setTimeout(() => {
-      reject(new Error("The request has timed out."));
-    }, 5000);
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', URL);
+    xhr.responseType = 'blob';
+    xhr.onload = function () {
+      var status = xhr.status;
+      if (status >= 200 && status < 300) {
+        resolve(xhr.response);
+      } else {
+        reject({
+          status: status,
+          statusText: xhr.statusText,
+        });
+      }
+    };
+    xhr.send();
+    setTimeout(() => {
+      xhr.abort();
+      xhr.open('GET', URL);
 
-    fetch(`${URL}`, {
-  headers: {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36'
-  }
-})
-      .then(response => {
-        clearTimeout(timeoutId);
-        if (!response.ok) {
-          console.error(`HTTP error! status: ${response.status}`);
-        }
-        return response.blob();
-      })
-      .then(blob => resolve(blob))
-      .catch(error => reject(error));
+      xhr.send();
+    }, 1000);
   });
 }
-
-
