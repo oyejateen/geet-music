@@ -42,7 +42,7 @@ const FeedbackForm = () => {
     };
 
     axios
-      .post('https://contact.iiiv.repl.co/contact', post)
+      .post('https://xmailerr.glitch.me/contact', post)
       .then(function (response) {
         // console.log(response.data.status);
         // also clear the form
@@ -66,9 +66,6 @@ const FeedbackForm = () => {
   React.useEffect(() => {
     loadReCaptcha('6Le1toEUAAAAAITyNwqEMaz3hFAYzciSJDMomrgN');
   }, []);
-const handle = () => {
-    window.open("https://jatinxd.tk/message", "_blank");
-  };
 
   const verifyCallback = (token) => {
     // // console.log(token);
@@ -80,18 +77,76 @@ const handle = () => {
 
   return (
     <Grid
+      component="form"
+      ref={formEl}
+      onSubmit={submitForm}
+      container
       required
       justify="center"
       style={{ width: '90%', maxWidth: '500px', margin: '0 auto' }}
     >
-   
+      <ReCaptcha
+        sitekey="6Le1toEUAAAAAITyNwqEMaz3hFAYzciSJDMomrgN"
+        action="action_name"
+        verifyCallback={verifyCallback}
+      />
+      <TextField
+        id="outlined-email-input"
+        label="Name"
+        type="text"
+        name="name"
+        autoComplete="name"
+        margin="normal"
+        variant="outlined"
+        fullWidth
+        color="primary"
+        required
+      />
+      <TextField
+        id="outlined-email-input"
+        label="Email"
+        type="email"
+        name="email"
+        autoComplete="email"
+        margin="normal"
+        variant="outlined"
+        fullWidth
+        color="primary"
+        required
+      />
+      <TextField
+        id="outlined-email-input"
+        label="Feedback"
+        multiline
+        rows="4"
+        type="text"
+        name="message"
+        autoComplete="feedback"
+        margin="normal"
+        variant="outlined"
+        fullWidth
+        color="primary"
+        required
+      />
+      {isSending ? (
+        <LinearProgress
+          style={{
+            width: '100%',
+            transform: 'translateY(-12px)',
+            borderRadius: '2px',
+          }}
+        />
+      ) : null}
       <Button
-        style={{ margin: '90px' }}
+        style={{ marginTop: '10px' }}
         variant="outlined"
         color="primary"
-        onClick={handle}
-        type="button"
-      >Send Message</Button>
+        type="submit"
+        disabled={isSending ? true : false}
+      >
+        {/* if sending is true then show circular progress */}
+        {isSending ? 'Sending Feedback' : 'Send Feedback'}
+      </Button>
     </Grid>
   );
 };
