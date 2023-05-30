@@ -4,6 +4,6 @@ import axios from 'axios';
      
 });*/
 export default axios.create({
-  baseURL: "https://ylight-music-api.vercel.app",
+  baseURL: "http://server-teddy6969.vercel.app/",
 });
 //instance.defaults.headers.common['Authorization'] = "AIzaSyBh3IuBJGuNTYp70xeMSUpOBMmW2S5gFSA";
