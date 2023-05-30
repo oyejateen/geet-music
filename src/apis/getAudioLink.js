@@ -4,6 +4,6 @@ import axios from 'axios';
      
 });*/
 export default axios.create({
-  baseURL: "http://server-teddy6969.vercel.app/",
+  baseURL: "https://server-geet.iiiv.repl.co/",
 });
 //instance.defaults.headers.common['Authorization'] = "AIzaSyBh3IuBJGuNTYp70xeMSUpOBMmW2S5gFSA";
